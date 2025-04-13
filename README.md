@@ -18,19 +18,20 @@ Este é o backend da aplicação de xadrez, desenvolvido em Java 17 com Spring B
 
 ### ▶️ Rodando localmente
 
-- git clone https://github.com/seu-usuario/xadrez-backend.git  
+- git clone https://github.com/Thalles-HsA/chess-backend.git
 - cd xadrez-backend  
 - ./mvnw spring-boot:run
 - O servidor será iniciado em: http://localhost:8080
 
-### 🔗 Endpoints disponíveis
+## 🔗 Endpoints disponíveis
 
-## GET /game
+### GET /game
 
 Retorna o estado atual do tabuleiro de xadrez.
 
 **Exemplo de resposta:**
 
+```
 {
   "board": [
     ["bR", "bN", "bB", "bQ", "bK", "bB", "bN", "bR"],
@@ -43,15 +44,18 @@ Retorna o estado atual do tabuleiro de xadrez.
     ["wR", "wN", "wB", "wQ", "wK", "wB", "wN", "wR"]
   ]
 }
+```
 
-## POST /game/move
+### POST /game/move
 Envia uma jogada.
 Corpo da requisição:
 
+```
 {
   "from": "e2",
   "to": "e4"
 }
+```
 
 Respostas possíveis:
 
@@ -59,7 +63,7 @@ Respostas possíveis:
 "Invalid move"
 
 
-### 🧩 Estrutura do projeto
+## 🧩 Estrutura do projeto
 src/main/java/com/br/xadrez/
 ├── controller     -> Endpoints REST  
 ├── service        -> Lógica de negócio  
@@ -68,20 +72,14 @@ src/main/java/com/br/xadrez/
 └── util           -> Utilitários (FEN, validações etc)
 
 
-### 🎯 Futuras implementações
-Validação de jogadas
-
-Controle de turnos (branco/preto)
-
-Histórico de jogadas
-
-Exportação/importação em FEN
-
-Integração com motor de IA (Python)
-
-Persistência com banco de dados
-
-Suporte a roque, promoção e en passant
+## 🎯 Futuras implementações
+- Validação de jogadas
+- Controle de turnos (branco/preto)
+- Histórico de jogadas
+- Exportação/importação em FEN
+- Integração com motor de IA (Python)
+- Persistência com banco de dados
+- Suporte a roque, promoção e en passant
 
 ### 📜 Licença
 Este projeto está licenciado sob a MIT License.
